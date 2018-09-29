@@ -25,6 +25,17 @@
 		cd /user/local/java
 	5.解压压缩包
 	 	tar xvf jdk-8u181-linux-x64.tar.gz
+	6.配置java 环境变量
+		
+		vi /etc/profile
+		将一下文件添加到文件底部	
+		JAVA_HOME=/usr/local/java/jdk1.8.0_181
+		PATH=$JAVA_HOME/bin:$PATH
+		CLASSPATH=$JAVA_HOME/jre/lib/ext:$JAVA_HOME/lib/tools.jar
+		export PATH JAVA_HOME CLASSPATH
+
+	7. 让配置生效
+		source /etc/profile
 	6.测试是否安装成功
 		 输入一下命令
 			java
