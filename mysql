@@ -1,0 +1,10 @@
+
+mysql  
+	1.处理碎片内存
+	    1.查看碎片信息
+		SHOW TABLE STATUS LIKE 'one_%'
+	    2.清理碎片
+		（InnoDB）
+		ALTER TABLE tablename ENGINE=InnoDB
+		（Myisam）
+		OPTIMIZE TABLE `one_resource`

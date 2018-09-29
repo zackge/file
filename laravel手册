@@ -1,0 +1,38 @@
+laravel 5.5
+ 1.如何添加一个容器
+	1.在app/providers下面新建一个AppServiceProvider.php文件
+	2.在register 下面绑定一个关系
+ 		$this->app->bind('Test', function ($app) {
+		    return new DdService();
+		});
+	//DdService 随便在文件夹里的一个文件 只要能NEW
+	3.在cofing/app的providers数组里添加
+		App\Providers\AppServiceProvider::class,
+	4.这样就结束了
+	调用 app()->make('Test')->tests(); //tests是DdService里面的方法
+
+	第二种缩写情况（门面）
+	在上面的基础上然后在继续
+	1.app/Facades里面继续新增一个文件
+		//TestFacade文件
+			<?php
+			namespace App\Facades;
+
+			use Illuminate\Support\Facades\Facade;
+
+			class TestFacade extends Facade
+			{
+			    protected static function getFacadeAccessor()
+			    {
+				return 'Test';
+			    }
+			}
+	2.在cofing/app的aliases数组里添加
+		'Test' => App\Facades\TestFacade::class,
+
+	3.可以了，然后调用就ok
+	Test::tests();
+	
+	这样就完成了一个容器。容器的加载。第二部分是为了方便，一个关键词就可以调用一个方法
+		
+		

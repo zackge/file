@@ -1,0 +1,41 @@
+1.elasticsearch 使用教程
+	
+ 	一.安装elasticsearch
+	二.安装java(1.8以上)	
+	三.调用elasticsearch
+
+
+《---------------华丽分割线------------》
+	一：安装elasticsearch
+
+	忽略  后续补上
+
+
+	二：安装java
+
+	1： 下载安装包
+		wget "URL" -O name
+	
+		例子 wget 'http://download.oracle.com/otn-pub/java/jdk/8u181-b13/96a7b8442fe848ef90c96a2fad6ed6d1/jdk-8u181-linux-x64.tar.gz?AuthParam=1538202100_4ae247554a1846dc7106db79f911928f' -O jdk-8u181-linux-x64.tar.gz
+	2：复制到/user/local/java
+		cp jdk-8u181-linux-x64.tar.gz /user/local/java
+	3.删除压缩包 	
+		rm jdk-8u181-linux-x64.tar.gz
+	4.进入 /user/local/java
+		cd /user/local/java
+	5.解压压缩包
+	 	tar xvf jdk-8u181-linux-x64.tar.gz
+	6.测试是否安装成功
+		 输入一下命令
+			java
+			java -version
+		显示版本 则安装成功
+
+
+
+
+
+	
+
+	
+
