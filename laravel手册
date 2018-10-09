@@ -1,3 +1,25 @@
+安装项目：
+安装git 
+	yum install git
+安装composer 
+   oneinstack 下 ./addons.sh
+
+
+git clone   拉取
+然后配置  .env
+composer install
+php artison key:generate (生成app_key)
+
+基本完成
+
+
+
+
+
+
+
+
+
 laravel 5.5
  1.如何添加一个容器
 	1.在app/providers下面新建一个AppServiceProvider.php文件
