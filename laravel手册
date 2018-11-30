@@ -1,8 +1,38 @@
+
+查询是否安装软件
+rpm -qa | grep "firewall"
+
+查看进程号，
+ps auxl | grep nginx
+
+kill -HUP 进程号
+
+
+安装防火墙
+firewalld
+
+systemctl status firewalld
+
+firewall-cmd --zone=public --add-port=8080/tcp --permanent 
+
+permanent  //永久生效
+
+#添加永久端口:80
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+#删除永久端口:80
+firewall-cmd --zone=public --remove-port=80/tcp --permanent
+#使用添加或删除端口生效
+firewall-cmd --reload
+#查看添加端口
+firewall-cmd --list-ports
+
+
 安装项目：
 安装git 
 	yum install git
 安装composer 
    oneinstack 下 ./addons.sh
+chmod -R 777 storage/
 
 
 git clone   拉取
